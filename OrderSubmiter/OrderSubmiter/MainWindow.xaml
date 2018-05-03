@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderSubmiter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="548.464" Width="1162.429">
     <Grid RenderTransformOrigin="0.488,0.512">
-        <Button x:Name="getProducts" Content="Get Products" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="271" Height="149" Click="button_Click"/>
+        <Button x:Name="Refesh" Content="Refesh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Height="35" Click="button_Click" BorderThickness="0,1,1,1"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="24" Margin="126,0,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="153" AutomationProperties.HelpText="Search for a product by ID" TextChanged="textBox_TextChanged"/>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="99,0,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Search" HorizontalAlignment="Left" Margin="284,0,0,0" VerticalAlignment="Top" Width="48"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="383" Margin="99,89,0,0" VerticalAlignment="Top" Width="997">
+            <StackPanel x:Name="productHolder" HorizontalAlignment="Left"/>
+        </ScrollViewer>
 
     </Grid>
 </Window>
