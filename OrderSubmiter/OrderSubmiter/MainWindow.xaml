@@ -5,15 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderSubmiter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="548.464" Width="1162.429">
-    <Grid RenderTransformOrigin="0.488,0.512">
-        <Button x:Name="Refesh" Content="Refesh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Height="35" Click="button_Click" BorderThickness="0,1,1,1"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="24" Margin="126,0,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="153" AutomationProperties.HelpText="Search for a product by ID" TextChanged="textBox_TextChanged"/>
-        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="99,0,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Search" HorizontalAlignment="Left" Margin="284,0,0,0" VerticalAlignment="Top" Width="48"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="383" Margin="99,89,0,0" VerticalAlignment="Top" Width="997">
-            <StackPanel x:Name="productHolder" HorizontalAlignment="Left"/>
-        </ScrollViewer>
+        Title="MainWindow" Height="725.964" Width="1200">
+    <Grid RenderTransformOrigin="0.488,0.512" Margin="0,0,0,-2">
+        <Button x:Name="Refesh" Margin="10,10,0,0" Content="Refesh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Height="35" Click="refresh" BorderThickness="0,1,1,1"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="24" Margin="126,10,0,0" TextWrapping="Wrap" Text="not implemented" VerticalAlignment="Top" Width="153" AutomationProperties.HelpText="Search for a product by ID"/>
+        <Button x:Name="button" Content="Search" HorizontalAlignment="Left" Margin="284,10,0,0" VerticalAlignment="Top" Width="48"/>
+        <Border BorderThickness="2" BorderBrush="LightGray" Margin="10,60,10,10">
+            <ScrollViewer HorizontalAlignment="Left"  Width="1160" Height="628" VerticalAlignment="Top" Margin="0,0,0,0">
+                <StackPanel x:Name="productHolder" HorizontalAlignment="Left" Width="1159" Margin="0,0,0,0">
+                    <Border BorderThickness="2" BorderBrush="LightGray">
+                        <StackPanel x:Name="product" Orientation="Horizontal">
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
 
     </Grid>
 </Window>
